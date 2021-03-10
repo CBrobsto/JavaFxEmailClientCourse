@@ -6,4 +6,5 @@ module JavaFxEmailClientCourse {
 
     opens com.cbrobsto;
     opens com.cbrobsto.view;
+    opens com.cbrobsto.controller;
 }

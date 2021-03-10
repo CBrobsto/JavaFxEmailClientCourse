@@ -1,5 +1,5 @@
 
-package com.cbrobsto.view;
+package com.cbrobsto.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
