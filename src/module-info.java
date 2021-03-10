@@ -5,4 +5,5 @@ module JavaFxEmailClientCourse {
     requires javafx.web;
 
     opens com.cbrobsto;
+    opens com.cbrobsto.view;
 }
