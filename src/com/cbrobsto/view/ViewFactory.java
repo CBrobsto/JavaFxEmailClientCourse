@@ -3,6 +3,7 @@ package com.cbrobsto.view;
 import com.cbrobsto.EmailManager;
 import com.cbrobsto.controller.BaseController;
 import com.cbrobsto.controller.LoginWindowController;
+import com.cbrobsto.controller.MainWindowController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -22,8 +23,19 @@ public class ViewFactory {
         System.out.println("show login window called");
 
         BaseController controller =  new LoginWindowController(emailManager, this, "LoginWindow.fxml");
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(controller.getFXMLName()));
-        fxmlLoader.setController(controller);
+        initializeStage(controller);
+    }
+
+    public void showMainWindow() {
+        System.out.println("main window called");
+
+        BaseController controller = new MainWindowController(emailManager, this, "MainWindow.fxml");
+        initializeStage(controller);
+    }
+
+    private void initializeStage(BaseController baseController) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(baseController.getFXMLName()));
+        fxmlLoader.setController(baseController);
         Parent parent;
         try {
             parent = fxmlLoader.load();
