@@ -14,4 +14,8 @@ public abstract class BaseController {
         this.viewFactory = viewFactory;
         this.fxmlName = fxmlName;
     }
+
+    public String getFXMLName() {
+        return this.fxmlName;
+    }
 }

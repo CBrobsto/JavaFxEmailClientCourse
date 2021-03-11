@@ -1,4 +1,3 @@
-
 package com.cbrobsto.controller;
 
 import com.cbrobsto.EmailManager;

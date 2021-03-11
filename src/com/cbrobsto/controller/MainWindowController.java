@@ -1,7 +1,7 @@
-package com.cbrobsto.view;
+package com.cbrobsto.controller;
 
 import com.cbrobsto.EmailManager;
-import com.cbrobsto.controller.BaseController;
+import com.cbrobsto.view.ViewFactory;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TreeView;
