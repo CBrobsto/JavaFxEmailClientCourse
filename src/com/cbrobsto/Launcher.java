@@ -2,9 +2,6 @@ package com.cbrobsto;
 
 import com.cbrobsto.view.ViewFactory;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Launcher extends Application {
@@ -18,5 +15,6 @@ public class Launcher extends Application {
 
         ViewFactory viewFactory = new ViewFactory(new EmailManager());
         viewFactory.showLoginWindow();
+        viewFactory.updateStyles();
     }
 }
