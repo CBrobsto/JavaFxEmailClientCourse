@@ -18,7 +18,10 @@ public class MainWindowController {
 
     @FXML
     void optionsAction() {
-
+        // Singleton.getInstance().getThisObject().getSomething().doSomething();
+        // One approach to inter-class communication.
+        // However, as you can see above, this does not lead to very clean code.
+        // As time goes on, the Singleton grows larger and larger.
     }
 
 }
