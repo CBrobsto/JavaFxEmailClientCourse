@@ -4,6 +4,7 @@ import com.cbrobsto.EmailManager;
 import com.cbrobsto.controller.BaseController;
 import com.cbrobsto.controller.LoginWindowController;
 import com.cbrobsto.controller.MainWindowController;
+import com.cbrobsto.controller.OptionsWindowController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -30,6 +31,12 @@ public class ViewFactory {
         System.out.println("main window called");
 
         BaseController controller = new MainWindowController(emailManager, this, "MainWindow.fxml");
+        initializeStage(controller);
+    }
+
+    public void showOptionsWindow() {
+        System.out.println("options window called");
+        BaseController controller = new OptionsWindowController(emailManager, this, "OptionsWindow.fxml");
         initializeStage(controller);
     }
 
