@@ -1,11 +1,13 @@
 package com.cbrobsto.view;
 
+import com.cbrobsto.EmailManager;
+import com.cbrobsto.controller.BaseController;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TreeView;
 import javafx.scene.web.WebView;
 
-public class MainWindowController {
+public class MainWindowController extends BaseController {
 
     @FXML
     private TreeView<?> emailsTreeView;
@@ -16,12 +18,13 @@ public class MainWindowController {
     @FXML
     private WebView emailWebView;
 
+    public MainWindowController(EmailManager emailManager, ViewFactory viewFactory, String fxmlName) {
+        super(emailManager, viewFactory, fxmlName);
+    }
+
     @FXML
     void optionsAction() {
-        // Singleton.getInstance().getThisObject().getSomething().doSomething();
-        // One approach to inter-class communication.
-        // However, as you can see above, this does not lead to very clean code.
-        // As time goes on, the Singleton grows larger and larger.
+
     }
 
 }
